@@ -1,0 +1,12 @@
+[unit]
+Description=Service to run lixieclient
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/python3 /home/pi/IO/displays/lixie/python/lixieclient.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
